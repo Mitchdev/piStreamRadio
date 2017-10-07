@@ -28,7 +28,7 @@ else
   # Use our pallete for a dope optimized gif
   ffmpeg -i "$GIF" \
   -i "$PALLET_PATH" \
-  -lavfi "fps=$VIDEO_FPS,scale=w=$MAX_GIF_SIZE:h=$MAX_GIF_SIZE:force_original_aspect_ratio=decrease \
+  -lavfi "fps=$VIDEO_FPS,scale=w:1920:h=1080:force_original_aspect_ratio=decrease \
   [x]; [x][1:v] paletteuse=dither=sierra2_4a" \
   -f gif - | gifsicle --optimize=3 --delay=6 > "$OPTIMIZED_GIF_PATH"
 fi

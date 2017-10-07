@@ -4,13 +4,7 @@
 source radioFiles/config.sh
 
 # Introuduce the program to the user
-echo " "
-echo " "
-echo "--------------------------------------------------"
 echo "Please wait while we initialize the stream..."
-echo "--------------------------------------------------"
-echo " "
-echo " "
 
 # Ensure our alsa is allowing for a looped recording
 sudo modprobe snd-aloop pcm_substreams=1
@@ -36,13 +30,7 @@ echo "$CURRENT_GIF" > "$CURRENT_GIF_PATH"
 RANDOM_GIF=$(./getFileFromDir.sh "$GIF_DIRECTORY")
 ./optimizeGif.sh "$RANDOM_GIF" "$CURRENT_GIF"
 
-echo " "
-echo " "
-echo "--------------------------------------------------"
 echo "Starting the stream..."
-echo "--------------------------------------------------"
-echo " "
-echo " "
 
 while true ; do
 
@@ -93,11 +81,5 @@ while true ; do
       sudo killall generateGif
 
       # Loop to the next song
-      echo " "
-      echo " "
-      echo "--------------------------------------------------"
       echo "Playing next song..."
-      echo "--------------------------------------------------"
-      echo " "
-      echo " "
 done

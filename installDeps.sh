@@ -36,17 +36,11 @@ cp installFiles/asoundrc ~/.asoundrc
 # sudo ldconfig
 
 # Should be finished
-echo " "
-echo " "
 echo "Testing FFmpeg..."
-echo " "
-echo " "
 # Set our ffmpeg to our PATH
 source exportFFmpegToPath.sh
 ffmpeg
 
-echo " "
 echo "piStreamRadio is now finished installing!"
-echo " "
 echo "Please be sure to create a config.sh in the radioFiles/ directory."
 echo "Then, you can run ./startStream.sh from the piStreamRadio directory to start streaming!"
